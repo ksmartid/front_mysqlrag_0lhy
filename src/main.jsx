@@ -36,7 +36,7 @@ function App(){
 
   return <AppContext.Provider value={ctx}><div className="shell">
     <header>
-      <div><small>MYSQL · POSTGRESQL RAG · OLLAMA / GEMINI</small><h1>쇼핑몰 AI 서비스</h1><p>후기·불만·정책 문서를 근거로 관리자, 판매자, 구매자에게 역할별 AI 기능을 제공한다.</p></div>
+      <div><small>MYSQL · POSTGRESQL RAG · OLLAMA / GEMINI</small><h1>front_mysqlrag_0lhy:v5 쇼핑몰 AI 서비스</h1><p>후기·불만·정책 문서를 근거로 관리자, 판매자, 구매자에게 역할별 AI 기능을 제공한다.</p></div>
       <div className="who">
         <label>사용자<select value={user?.id??''} onChange={e=>selectUser(users.find(u=>u.id===Number(e.target.value)))}>
           {['ADMIN','SELLER','BUYER'].map(r=><optgroup key={r} label={ROLE_LABEL[r]}>{users.filter(u=>u.role===r).map(u=><option key={u.id} value={u.id}>{u.display_name} ({u.username})</option>)}</optgroup>)}
